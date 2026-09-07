@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ReBuy - Second Hand Store</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>♻️ ReBuy</h1>
+        <p>Buy and Sell Pre-Loved Products</p>
+    </header>
+
+
+    <main>
+
+        <!-- Search -->
+        <section class="search">
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search products..."
+            >
+        </section>
+
+
+        <!-- Sell Product -->
+        <section class="sell-box">
+
+            <h2>Sell Your Product</h2>
+
+            <input
+                type="text"
+                id="productName"
+                placeholder="Product name"
+            >
+
+            <input
+                type="number"
+                id="productPrice"
+                placeholder="Price"
+            >
+
+            <input
+                type="text"
+                id="productCondition"
+                placeholder="Condition (Good, Like New...)"
+            >
+
+            <button onclick="addProduct()">
+                Sell Product
+            </button>
+
+        </section>
+
+
+        <!-- Products -->
+        <section>
+
+            <h2>Available Products</h2>
+
+            <div id="productList" class="product-list">
+
+                <!-- Product 1 -->
+                <div class="product">
+
+                    <div class="product-image">📱</div>
+
+                    <h3>Used Smartphone</h3>
+
+                    <p>Good condition smartphone</p>
+
+                    <p class="condition">
+                        Condition: Good
+                    </p>
+
+                    <strong>₹8,000</strong>
+
+                    <button onclick="addToCart('Used Smartphone', 8000)">
+                        Buy Now
+                    </button>
+
+                </div>
+
+
+                <!-- Product 2 -->
+                <div class="product">
+
+                    <div class="product-image">💻</div>
+
+                    <h3>Second-Hand Laptop</h3>
+
+                    <p>Laptop in working condition</p>
+
+                    <p class="condition">
+                        Condition: Like New
+                    </p>
+
+                    <strong>₹25,000</strong>
+
+                    <button onclick="addToCart('Second-Hand Laptop', 25000)">
+                        Buy Now
+                    </button>
+
+                </div>
+
+
+                <!-- Product 3 -->
+                <div class="product">
+
+                    <div class="product-image">🎧</div>
+
+                    <h3>Wireless Headphones</h3>
+
+                    <p>Good quality headphones</p>
+
+                    <p class="condition">
+                        Condition: Good
+                    </p>
+
+                    <strong>₹1,200</strong>
+
+                    <button onclick="addToCart('Wireless Headphones', 1200)">
+                        Buy Now
+                    </button>
+
+                </div>
+
+
+                <!-- Product 4 -->
+                <div class="product">
+
+                    <div class="product-image">📚</div>
+
+                    <h3>Engineering Books</h3>
+
+                    <p>Set of used engineering books</p>
+
+                    <p class="condition">
+                        Condition: Good
+                    </p>
+
+                    <strong>₹800</strong>
+
+                    <button onclick="addToCart('Engineering Books', 800)">
+                        Buy Now
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Cart -->
+        <section class="cart">
+
+            <h2>🛒 Shopping Cart</h2>
+
+            <div id="cartItems">
+                <p>Your cart is empty.</p>
+            </div>
+
+            <h3>
+                Total: ₹<span id="total">0</span>
+            </h3>
+
+            <button onclick="checkout()">
+                Checkout
+            </button>
+
+        </section>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
